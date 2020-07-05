@@ -21,35 +21,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kuN-lA-GCl" userLabel="Character Selection SV">
-                                <rect key="frame" x="60" y="395" width="49" height="148"/>
-                                <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-qT-I1U">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-LH-l3T">
-                                        <rect key="frame" x="0.0" y="39" width="51" height="31"/>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xp8-h4-OIV">
-                                        <rect key="frame" x="0.0" y="78" width="51" height="31"/>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aho-vL-mjv">
-                                        <rect key="frame" x="0.0" y="117" width="51" height="31"/>
-                                    </switch>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-b2-gLL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-b2-gLL">
                                 <rect key="frame" x="60" y="178" width="272" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7PJ-WV-WB2"/>
+                                </constraints>
                                 <string key="text">Below there are several options to determine the length and characters used in your password. Once you have made your selections, click "Generate Password" below.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-dR-SUc">
-                                <rect key="frame" x="58" y="352" width="118" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kuN-lA-GCl" userLabel="Character Selection SV">
+                                <rect key="frame" x="60" y="395" width="49" height="148"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-qT-I1U">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-LH-l3T">
+                                        <rect key="frame" x="0.0" y="39" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xp8-h4-OIV">
+                                        <rect key="frame" x="0.0" y="78" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aho-vL-mjv">
+                                        <rect key="frame" x="0.0" y="117" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6Xa-pY-OnP" userLabel="Button SV">
                                 <rect key="frame" x="37" y="751" width="340" height="30"/>
                                 <subviews>
@@ -75,15 +73,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="8" maxValue="128" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-dR-SUc" userLabel="Password Length Slider">
+                                <rect key="frame" x="58" y="351" width="175" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ct4-O2-XC1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="5jS-aj-FSY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Xa-pY-OnP" secondAttribute="trailing" constant="37" id="7vK-Ii-PIi"/>
                             <constraint firstItem="6Xa-pY-OnP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="9l5-hL-2zh"/>
+                            <constraint firstItem="aTi-b2-gLL" firstAttribute="leading" secondItem="5N8-dR-SUc" secondAttribute="leading" id="DZU-o0-57A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5N8-dR-SUc" secondAttribute="trailing" constant="183" id="K1F-EA-Qd4"/>
+                            <constraint firstItem="aTi-b2-gLL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Pqu-Hs-xTV"/>
+                            <constraint firstItem="aTi-b2-gLL" firstAttribute="leading" secondItem="kuN-lA-GCl" secondAttribute="leading" id="QDz-iK-YkT"/>
+                            <constraint firstItem="kuN-lA-GCl" firstAttribute="top" secondItem="5N8-dR-SUc" secondAttribute="bottom" constant="14" id="dyp-Ld-2IR"/>
+                            <constraint firstItem="aTi-b2-gLL" firstAttribute="top" secondItem="Ct4-O2-XC1" secondAttribute="bottom" constant="56.5" id="eyI-FQ-65J"/>
                             <constraint firstItem="6Xa-pY-OnP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="g8h-xb-7Yi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Xa-pY-OnP" secondAttribute="bottom" constant="81" id="gPh-AK-sTb"/>
                             <constraint firstItem="Ct4-O2-XC1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="i46-ve-Jut"/>
+                            <constraint firstItem="aTi-b2-gLL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="kKz-i2-Wss"/>
+                            <constraint firstItem="5N8-dR-SUc" firstAttribute="top" secondItem="aTi-b2-gLL" secondAttribute="bottom" constant="73" id="paW-z8-3Wj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
