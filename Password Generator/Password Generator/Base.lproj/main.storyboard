@@ -78,6 +78,9 @@
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="8" maxValue="128" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-dR-SUc" userLabel="Password Length Slider">
                                 <rect key="frame" x="58" y="351" width="175" height="31"/>
+                                <connections>
+                                    <action selector="updateSliderLength:" destination="01J-lp-oVM" eventType="valueChanged" id="bxR-ZW-dc0"/>
+                                </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-oH-h8W">
                                 <rect key="frame" x="222" y="395" width="172" height="148"/>
@@ -108,17 +111,35 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-ag-20S" userLabel="Password Display">
+                                <rect key="frame" x="76" y="567" width="262" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjk-mJ-Yca" userLabel="Password Length">
+                                <rect key="frame" x="275" y="356" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hhu-oH-h8W" firstAttribute="top" secondItem="kuN-lA-GCl" secondAttribute="top" id="2gB-Wb-9mf"/>
                             <constraint firstItem="Ct4-O2-XC1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="5jS-aj-FSY"/>
+                            <constraint firstItem="eTe-ag-20S" firstAttribute="top" secondItem="kuN-lA-GCl" secondAttribute="bottom" constant="24" id="6FV-tV-3Md"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Xa-pY-OnP" secondAttribute="trailing" constant="37" id="7vK-Ii-PIi"/>
                             <constraint firstItem="6Xa-pY-OnP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="9l5-hL-2zh"/>
+                            <constraint firstItem="6Xa-pY-OnP" firstAttribute="top" secondItem="eTe-ag-20S" secondAttribute="bottom" constant="56" id="BHV-Ek-ez5"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="leading" secondItem="5N8-dR-SUc" secondAttribute="leading" id="DZU-o0-57A"/>
+                            <constraint firstItem="eTe-ag-20S" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Edv-Op-Ahh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5N8-dR-SUc" secondAttribute="trailing" constant="183" id="K1F-EA-Qd4"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Pqu-Hs-xTV"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="leading" secondItem="kuN-lA-GCl" secondAttribute="leading" id="QDz-iK-YkT"/>
+                            <constraint firstItem="eTe-ag-20S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="Znc-1K-VBh"/>
                             <constraint firstItem="kuN-lA-GCl" firstAttribute="top" secondItem="5N8-dR-SUc" secondAttribute="bottom" constant="14" id="dyp-Ld-2IR"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="top" secondItem="Ct4-O2-XC1" secondAttribute="bottom" constant="56.5" id="eyI-FQ-65J"/>
                             <constraint firstItem="6Xa-pY-OnP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="g8h-xb-7Yi"/>
@@ -134,6 +155,9 @@
                         <outlet property="UppercaseSwitch" destination="xa3-LH-l3T" id="DG6-3l-OGt"/>
                         <outlet property="lowercaseSwitch" destination="Nlj-qT-I1U" id="HwB-0n-fDp"/>
                         <outlet property="numberSwitch" destination="xp8-h4-OIV" id="yv3-zj-jE4"/>
+                        <outlet property="passwordDisplay" destination="eTe-ag-20S" id="BG8-QH-ygL"/>
+                        <outlet property="sliderLength" destination="5N8-dR-SUc" id="zek-1A-ksa"/>
+                        <outlet property="sliderLengthDisplay" destination="Yjk-mJ-Yca" id="LwC-HH-dp1"/>
                         <outlet property="specialSwitch" destination="aho-vL-mjv" id="Keu-xf-opX"/>
                     </connections>
                 </viewController>
