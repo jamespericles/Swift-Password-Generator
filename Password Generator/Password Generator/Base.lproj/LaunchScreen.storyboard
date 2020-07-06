@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" customClass="ViewController" customModule="Password_Generator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-b2-gLL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-b2-gLL" userLabel="Description">
                                 <rect key="frame" x="60" y="178" width="272" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="7PJ-WV-WB2"/>
@@ -36,15 +36,27 @@
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-qT-I1U" userLabel="Lowercase Switch">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="lowercaseCharacterSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="zJv-NH-Csf"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-LH-l3T" userLabel="Uppercase Switch">
                                         <rect key="frame" x="0.0" y="39" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="uppercaseCharacterSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="7KN-pe-FkQ"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xp8-h4-OIV" userLabel="Number Switch">
                                         <rect key="frame" x="0.0" y="78" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="numberSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="hCq-YK-qtj"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aho-vL-mjv" userLabel="Special Characters Switch">
                                         <rect key="frame" x="0.0" y="117" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="specialCharacterSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="rhW-3t-uUE"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -60,6 +72,9 @@
                                         <state key="normal" title="Generate Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="generateButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="IJl-p0-ZQH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbl-Ik-fDk">
                                         <rect key="frame" x="190" y="0.0" width="150" height="30"/>
@@ -70,13 +85,19 @@
                                         <state key="normal" title="Copy Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="copyButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="tFK-43-lz4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="8" maxValue="128" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-dR-SUc" userLabel="Password Length Slider">
                                 <rect key="frame" x="58" y="351" width="175" height="31"/>
+                                <connections>
+                                    <action selector="passwordLengthSlider:" destination="01J-lp-oVM" eventType="valueChanged" id="lku-Be-Hwm"/>
+                                </connections>
                             </slider>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-oH-h8W">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-oH-h8W">
                                 <rect key="frame" x="222" y="395" width="172" height="148"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lowercase Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4b-Yz-odP">
@@ -108,6 +129,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hhu-oH-h8W" firstAttribute="top" secondItem="kuN-lA-GCl" secondAttribute="top" id="2gB-Wb-9mf"/>
                             <constraint firstItem="Ct4-O2-XC1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="5jS-aj-FSY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Xa-pY-OnP" secondAttribute="trailing" constant="37" id="7vK-Ii-PIi"/>
                             <constraint firstItem="6Xa-pY-OnP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="9l5-hL-2zh"/>
