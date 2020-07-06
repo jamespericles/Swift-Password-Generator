@@ -60,8 +60,9 @@ class ViewController: UIViewController {
        print(passwordCharSet)
     }
 //    Copy function
-    @IBAction func copyPassword(_ sender: UIButton){
-        
+    @IBAction func copyPassword(_ sender: UIButton) {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = passwordDisplay.text
     }
     
 //    Update the length of the slider live
