@@ -36,27 +36,15 @@
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-qT-I1U" userLabel="Lowercase Switch">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="lowercaseCharacterSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="zJv-NH-Csf"/>
-                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-LH-l3T" userLabel="Uppercase Switch">
                                         <rect key="frame" x="0.0" y="39" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="uppercaseCharacterSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="7KN-pe-FkQ"/>
-                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xp8-h4-OIV" userLabel="Number Switch">
                                         <rect key="frame" x="0.0" y="78" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="numberSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="hCq-YK-qtj"/>
-                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aho-vL-mjv" userLabel="Special Characters Switch">
                                         <rect key="frame" x="0.0" y="117" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="specialCharacterSwitch:" destination="01J-lp-oVM" eventType="valueChanged" id="rhW-3t-uUE"/>
-                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -73,7 +61,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="generateButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="IJl-p0-ZQH"/>
+                                            <action selector="generateButtonPressed:" destination="01J-lp-oVM" eventType="touchUpInside" id="H6M-WU-eWK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbl-Ik-fDk">
@@ -85,17 +73,11 @@
                                         <state key="normal" title="Copy Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="copyButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="tFK-43-lz4"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="8" maxValue="128" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-dR-SUc" userLabel="Password Length Slider">
                                 <rect key="frame" x="58" y="351" width="175" height="31"/>
-                                <connections>
-                                    <action selector="passwordLengthSlider:" destination="01J-lp-oVM" eventType="valueChanged" id="lku-Be-Hwm"/>
-                                </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-oH-h8W">
                                 <rect key="frame" x="222" y="395" width="172" height="148"/>
@@ -148,6 +130,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lowercaseSwitch" destination="Nlj-qT-I1U" id="HwB-0n-fDp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
