@@ -2,22 +2,44 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let lowercase = "abcdefghijklmnopqrstuvwxyz",
+    uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    numbers = "0123456789",
+    specialChar = "!@#$%^&*()_+~`|}{[]:;?><,./-="
     
-   @IBOutlet weak var lowercaseSwitch: UISwitch!
     
+    @IBOutlet weak var lowercaseSwitch: UISwitch!
+    @IBOutlet weak var uppercaseSwitch: UISwitch!
+    @IBOutlet weak var numberSwitch: UISwitch!
+    @IBOutlet weak var specialSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    
     }
     
     
     @IBAction func generateButtonPressed(_ sender: UIButton) {
-        lowercaseSwitch.isOn
-      
-        print("button pressed")
         
+        var passwordCharSet = ""
+        
+        if lowercaseSwitch.isOn{
+            passwordCharSet += lowercase
+        }
+        
+        if uppercaseSwitch.isOn {
+            passwordCharSet += uppercase
+        }
+        
+        if numberSwitch.isOn {
+            passwordCharSet += numbers
+        }
+        
+        if specialSwitch.isOn {
+            passwordCharSet += specialChar
+        }
+        
+       print(passwordCharSet)
     }
     
     

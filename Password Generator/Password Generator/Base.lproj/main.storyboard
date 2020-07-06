@@ -131,7 +131,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="UppercaseSwitch" destination="xa3-LH-l3T" id="DG6-3l-OGt"/>
                         <outlet property="lowercaseSwitch" destination="Nlj-qT-I1U" id="HwB-0n-fDp"/>
+                        <outlet property="numberSwitch" destination="xp8-h4-OIV" id="yv3-zj-jE4"/>
+                        <outlet property="specialSwitch" destination="aho-vL-mjv" id="Keu-xf-opX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
