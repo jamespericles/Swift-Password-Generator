@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 //    All elements related to the slider and displaying its length
     @IBOutlet weak var sliderLength: UISlider!
     @IBOutlet weak var sliderLengthDisplay: UILabel!
-    
+//    UITextView where password is displayed
     @IBOutlet weak var passwordDisplay: UITextView!
     
     override func viewDidLoad() {
@@ -31,6 +31,11 @@ class ViewController: UIViewController {
     @IBAction func generateButtonPressed(_ sender: UIButton) {
         
         var passwordCharSet = ""
+        
+        passwordDisplay.text = ""
+        
+        var passwordLength = Int(sliderLength.value)
+        
         
         if lowercaseSwitch.isOn{
             passwordCharSet += lowercase
@@ -48,8 +53,17 @@ class ViewController: UIViewController {
             passwordCharSet += specialChar
         }
         
+        for i in 0..<Int(sliderLength.value){
+            passwordDisplay.text += String(passwordCharSet.randomElement()!)
+        }
+        
        print(passwordCharSet)
     }
+//    Copy function
+    @IBAction func copyPassword(_ sender: UIButton){
+        
+    }
+    
 //    Update the length of the slider live
     @IBAction func updateSliderLength(_ sender: UISlider) {
         
