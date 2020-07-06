@@ -21,13 +21,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-b2-gLL" userLabel="Description">
-                                <rect key="frame" x="60" y="178" width="272" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-b2-gLL" userLabel="Description">
+                                <rect key="frame" x="29" y="146" width="348" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="7PJ-WV-WB2"/>
                                 </constraints>
-                                <string key="text">Below there are several options to determine the length and characters used in your password. Once you have made your selections, click "Generate Password" below.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <string key="text">Below there are several options to determine the length and characters used in your password. Once you have made your selections, click "Generate Password" below. You may need to scroll to view your entire password.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -130,7 +130,7 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-ag-20S" userLabel="Password Display">
-                                <rect key="frame" x="76" y="567" width="262" height="128"/>
+                                <rect key="frame" x="76" y="567" width="262" height="158"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -151,12 +151,12 @@
                             <constraint firstItem="eTe-ag-20S" firstAttribute="top" secondItem="kuN-lA-GCl" secondAttribute="bottom" constant="24" id="6FV-tV-3Md"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Xa-pY-OnP" secondAttribute="trailing" constant="37" id="7vK-Ii-PIi"/>
                             <constraint firstItem="6Xa-pY-OnP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="9l5-hL-2zh"/>
-                            <constraint firstItem="6Xa-pY-OnP" firstAttribute="top" secondItem="eTe-ag-20S" secondAttribute="bottom" constant="56" id="BHV-Ek-ez5"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="leading" secondItem="5N8-dR-SUc" secondAttribute="leading" id="DZU-o0-57A"/>
                             <constraint firstItem="eTe-ag-20S" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Edv-Op-Ahh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5N8-dR-SUc" secondAttribute="trailing" constant="183" id="K1F-EA-Qd4"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Pqu-Hs-xTV"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="leading" secondItem="kuN-lA-GCl" secondAttribute="leading" id="QDz-iK-YkT"/>
+                            <constraint firstItem="6Xa-pY-OnP" firstAttribute="top" secondItem="eTe-ag-20S" secondAttribute="bottom" constant="26" id="YZG-xv-HvX"/>
                             <constraint firstItem="eTe-ag-20S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="Znc-1K-VBh"/>
                             <constraint firstItem="kuN-lA-GCl" firstAttribute="top" secondItem="5N8-dR-SUc" secondAttribute="bottom" constant="14" id="dyp-Ld-2IR"/>
                             <constraint firstItem="aTi-b2-gLL" firstAttribute="top" secondItem="Ct4-O2-XC1" secondAttribute="bottom" constant="56.5" id="eyI-FQ-65J"/>
