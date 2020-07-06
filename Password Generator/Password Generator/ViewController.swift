@@ -30,11 +30,13 @@ class ViewController: UIViewController {
     
     }
     
-//    Function to check to see if all buttons are off. If so, disable the generate button to prevent a crash
+//    Function to check to see if all switches are off. If so, disable the generate button to prevent a crash
     @IBAction func switchValueChanged(_ sender: UISwitch!){
         
       if  !lowercaseSwitch.isOn && !uppercaseSwitch.isOn && !numberSwitch.isOn && !specialSwitch.isOn{
         generateButton.isEnabled = false
+      } else {generateButton.isEnabled = true
+        
         }
     }
 //     Generate function
