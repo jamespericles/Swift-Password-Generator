@@ -36,15 +36,27 @@
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-qT-I1U" userLabel="Lowercase Switch">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="01J-lp-oVM" eventType="valueChanged" id="gm5-Xn-fSv"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-LH-l3T" userLabel="Uppercase Switch">
                                         <rect key="frame" x="0.0" y="39" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="01J-lp-oVM" eventType="valueChanged" id="gMN-6c-pU5"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xp8-h4-OIV" userLabel="Number Switch">
                                         <rect key="frame" x="0.0" y="78" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="01J-lp-oVM" eventType="valueChanged" id="h7b-Uv-bAn"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aho-vL-mjv" userLabel="Special Characters Switch">
                                         <rect key="frame" x="0.0" y="117" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="01J-lp-oVM" eventType="valueChanged" id="lvh-qo-wN8"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -156,6 +168,7 @@
                     </view>
                     <connections>
                         <outlet property="UppercaseSwitch" destination="xa3-LH-l3T" id="DG6-3l-OGt"/>
+                        <outlet property="generateButton" destination="1x9-rc-bCX" id="4gI-jj-Ozd"/>
                         <outlet property="lowercaseSwitch" destination="Nlj-qT-I1U" id="HwB-0n-fDp"/>
                         <outlet property="numberSwitch" destination="xp8-h4-OIV" id="yv3-zj-jE4"/>
                         <outlet property="passwordDisplay" destination="eTe-ag-20S" id="BG8-QH-ygL"/>

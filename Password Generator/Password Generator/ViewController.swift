@@ -21,21 +21,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderLengthDisplay: UILabel!
 //    UITextView where password is displayed
     @IBOutlet weak var passwordDisplay: UITextView!
+//    Generate Button
+    @IBOutlet weak var generateButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
     }
     
+//    Function to check to see if all buttons are off. If so, disable the generate button to prevent a crash
+    @IBAction func switchValueChanged(_ sender: UISwitch!){
+        
+      if  !lowercaseSwitch.isOn && !uppercaseSwitch.isOn && !numberSwitch.isOn && !specialSwitch.isOn{
+        generateButton.isEnabled = false
+        }
+    }
 //     Generate function
-    @IBAction func generateButtonPressed(_ sender: UIButton) {
+    @IBAction func generateButtonPressed(_ sender: UIButton!) {
         
         var passwordCharSet = ""
-        
+//        Reset the passwordDisplay to be empty each time action is called
         passwordDisplay.text = ""
         
         var passwordLength = Int(sliderLength.value)
-        
         
         if lowercaseSwitch.isOn{
             passwordCharSet += lowercase
@@ -56,8 +65,6 @@ class ViewController: UIViewController {
         for i in 0..<Int(sliderLength.value){
             passwordDisplay.text += String(passwordCharSet.randomElement()!)
         }
-        
-       print(passwordCharSet)
     }
 //    Copy function
     @IBAction func copyPassword(_ sender: UIButton) {
