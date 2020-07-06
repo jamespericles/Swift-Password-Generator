@@ -52,8 +52,8 @@ class ViewController: UIViewController {
     }
 //    Update the length of the slider live
     @IBAction func updateSliderLength(_ sender: UISlider) {
-          
-        sliderLengthDisplay.text = "\(sender.value)"
+        
+        sliderLengthDisplay.text = String(format: "%.0f", sender.value)
           
       }
     
