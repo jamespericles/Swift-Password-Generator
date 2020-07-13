@@ -24,7 +24,7 @@ This application allows the user to create a randomly generated password after d
 
 ### <a name="Screenshots"></a>Screenshots
 
-![Password_Generator]()
+![Password_Generator](https://github.com/jamespericles/Swift-Password-Generator/blob/master/Screenshots/Password_Generated.png)
 
 ### <a name="Technologies-Used"></a>Technologies Used
 
