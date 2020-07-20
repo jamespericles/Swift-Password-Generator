@@ -40,4 +40,4 @@ Please feel free to iterate on my work if you so desire!
 
 ### <a name="Questions"></a>Questions
 
-For any questions related to this project or any of my other work, please contact me at jamesspericles@gmail.com
+For any questions related to this project or any of my other work, please contact me at jamesspericles@gmail.com.
