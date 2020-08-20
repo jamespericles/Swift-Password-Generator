@@ -28,11 +28,11 @@ This application allows the user to create a randomly generated password after d
 
 ### <a name="Technologies-Used"></a>Technologies Used
 
-This project utilizes Swift. This is a refractor of an older project I worked on [here](https://github.com/jamespericles/Random-Password-Generator). I used this as an exercise to teach myself Swift.
+This project utilizes Swift. This is a refactor of an older project I worked on [here](https://github.com/jamespericles/Random-Password-Generator). I used this as an exercise to teach myself Swift.
 
 ### <a name="Usage"></a>Usage
 
-Swift Random Password Generator works natively on iPhone and within Xcode's simulator.
+Swift Random Password Generator works natively on iPhone and within Xcode's simulator. It has not been pushed to the app store.
 
 ### <a name="Contributing"></a>Contributing
 
